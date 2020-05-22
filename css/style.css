@@ -7,10 +7,17 @@ body{
     counter-reset: section;
 }
 .landing{
+    position: relative;
     width: 100vw;
     height: 550px;
-    background: rgb(189, 25, 189);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 52% 100%, 50% 96%, 48% 100%, 0 100%);
+}
+.cover{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
 .page_content{
     width: 80vw;
@@ -21,7 +28,6 @@ body{
 }
 .page_header{
     position: relative;
-    background: linear-gradient(90deg,rgb(189, 25, 189),rgb(128, 20, 161),rgb(189, 25, 189));
     text-align: center;
     color: white;
     display: flex;
@@ -37,8 +43,9 @@ body{
     height: 100px;
     background: grey;
 }
-.page_header h1,h3{
-    margin: 15px;
+.page_title{
+    margin-top: -100px;
+    margin-bottom: 20px;
 }
 .container{
     width: 100vw;
