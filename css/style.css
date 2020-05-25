@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Permanent+Marker&family=Trade+Winds&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Open Sans;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 body{
     counter-reset: section;
@@ -44,6 +53,7 @@ body{
     background: grey;
 }
 .page_title{
+    font-family: 'Trade Winds';
     margin-top: -100px;
     margin-bottom: 20px;
 }
@@ -77,7 +87,7 @@ ul{
     list-style: none;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    font-size: 20px;
+    font-size: 18px;
 }
 .links{
     text-decoration: none;
@@ -86,4 +96,80 @@ li::before{
     counter-increment: subsection;
     content: counter(section)"."counter(subsection)" ";
 }
-
+.footer{
+    background: rgb(27, 27, 27);
+    width: 100%;
+    height: 280px;
+}
+footer{
+    color: #fff;
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    background: rgb(27, 27, 27);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.quick_links{
+    grid-column: 1/2;
+}
+.quick_links h1{
+    font-family: 'Megrim', cursive;
+}
+.quick_links span{
+    font-family: 'Megrim', cursive;
+    color: rgb(39, 226, 170);
+}
+.links{
+    margin: 10px;
+}
+.links a{
+    text-decoration: none;
+    color: #fff;
+}
+.address_con{
+    grid-column: 2/3;
+}
+.address a{
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+.i{
+    width: 40px;
+    height: 40px;
+    background: rgb(85, 82, 82);
+    margin: 0 10px;
+    border-radius: 50%;
+}
+.i i{
+    font-size: 20px;
+}
+.company_con p{
+    margin: 5px;
+}
+.social_links{
+    margin: 5px;
+}
+.social_links a{
+    font-size: 25px;
+    margin: 10px;
+    color: #fff;
+}
+@media screen and (max-width : 500px){
+    .landing{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%, 50% 96%, 45% 100%, 0 100%);
+    }
+    .part_container{
+        width: 90%;
+    }
+    ul{
+        font-size: 17px;
+    }
+}
+@media screen and (min-width : 501px) and (max-width:800px){
+    .part_container{
+        width: 80%;
+    }
+}
